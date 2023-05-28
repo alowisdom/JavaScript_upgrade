@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./utils.js"></script>
+    <script>
+        function Person(name,age){
+            this.name = name
+            this.age = age
+        }
+
+        Person.prototype.running = function(){
+            console.log("Person running")
+        }
+
+        function Student(name,age,height){
+            // 属性继承
+            Person.call(this,name,age)
+
+            // 自己的属性
+            this.height = height
+        }
+
+        // 封装 inherit 实现继承
+
+        // 方法二
+        // let p = new Person()
+        // Student.prototype = new Person() // p
+
+
+        const stu1 = new Student("yanqi",18,182)
+
+        console.log(stu1.name)
+        console.log(stu1.height)
+        stu1.running()
+
+    </script>
+</body>
+</html>

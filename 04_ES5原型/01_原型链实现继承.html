@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Person{
+            
+        }
+
+        // person 原型链上的方法
+        Person.prototype.running = function(){
+            console.log("Person running");
+        }
+
+        function student (){
+            
+        }
+
+        // 由这个改变prototype指向
+        // student.prototype = Person.prototype
+
+        // 创建一个连接，再绑定显示原型
+        // let p = new Person()
+        // student.prototype = p
+
+
+        const stu1 = new student()
+
+        stu1.running()
+
+
+
+
+    </script>
+</body>
+</html>
